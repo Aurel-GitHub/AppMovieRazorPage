@@ -35,12 +35,11 @@ namespace MyCoreApp.Pages.Movies
             if (Movie == null)
             {
                 return NotFound();
-            }
+            }   
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://aka.ms/RazorPagesCRUD.
+        
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -73,5 +72,7 @@ namespace MyCoreApp.Pages.Movies
         {
             return _context.Movie.Any(e => e.ID == id);
         }
+
+        
     }
 }
